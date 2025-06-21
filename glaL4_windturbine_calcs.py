@@ -14,8 +14,13 @@ ang_velocity = 9.1
 gear_box_multiplier = roation_speed / ang_velocity
 gear_box_factor_simscape = 1.0 / gear_box_multiplier
 t_period = 0.02
-frequency = 1 / t_period
-print("Frequency in Hz:", frequency)
+m = 3.6E4
+r = 45
 
+frequency = 1 / t_period
+inertia = 1/2*m*r**2
+
+print("Inertia:", inertia)
+print("Frequency in Hz:", frequency)
 print("Rotation speed in rad/s:", roation_speed)
 print("gear_box_factor_simscape:", gear_box_factor_simscape)
